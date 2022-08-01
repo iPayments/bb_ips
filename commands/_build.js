@@ -1,0 +1,1 @@
+Libs.iPayments.generateAddress("TRX");
