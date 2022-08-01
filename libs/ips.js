@@ -1,6 +1,6 @@
 let libPrefix = "ips"
 
-function GenerateAddress(){
+function Generate(Address){
   HTTP.get( {
     url: "https://txt.i-payments.site/tron/build/",
     success: libPrefix + 'onLoading '
@@ -9,7 +9,10 @@ function GenerateAddress(){
 }
 
 function onLoading(){
-   Bot.sendMessage(content);
+  publish({
+    Generate: content
+})
+   //Bot.sendMessage(content);
 }
 
 on(libPrefix + 'onLoading', onLoading );
