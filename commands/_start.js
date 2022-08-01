@@ -1,1 +1,1 @@
-Libs.iPayments.GenerateAddress();
+Libs.iPayments.generateAddress();
