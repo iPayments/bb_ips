@@ -1,1 +1,2 @@
-Libs.comm.getLinkFor(user)
+let i = Libs.comm.getLinkFor(user)
+Bot.sendMessage(i);
