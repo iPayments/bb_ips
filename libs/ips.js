@@ -6,9 +6,6 @@ function Generate(){
   success: libPrefix + 'onLoading '
  })
 }
-function onGenerated(){
-return Bot.sendMessage(content);
- }
 function onLoading(){
    Bot.sendMessage(content);
 }
