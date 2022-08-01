@@ -53,10 +53,7 @@ Bot.sendMessage('Use : `Libs.iPayments.CheckPrice("TRX","USDT","1");`');
   url:"https://api.i-payments.site/check/price/?key="+bbashkey+"&from="+from+"&to="+to+"&amo="+amo+"",
   success: libPrefix + 'Pricee'
  })
- /*HTTP.get({
-  url:""+price_api_url+"/?key="+bbashKey+"&from="+from+"&to="+to+"&amo="+amo+"",
-  success: libPrefix + 'Pricee'
- })*/
+
 }
 
 function Pricee(){
