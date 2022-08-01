@@ -78,7 +78,7 @@ Bot.sendMessage('Use : `Libs.iPayments.checkBalance("TRX");`');
  return
 }
 HTTP.get({
-  url:""+build_api_url+"/?PrivateKey="+prikey+"&PublicKey="+pubkey+"&Currency="+currency+"",
+  url:""+balance_api_url+"/?PrivateKey="+prikey+"&PublicKey="+pubkey+"&Currency="+currency+"",
   success: libPrefix + 'Balancee'  
 }
 
