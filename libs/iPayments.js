@@ -46,9 +46,9 @@ function loadKey(){
   }
 }
 function CheckPrice(){
-//let bashkey = loadBashKey();
+let bashkey = loadBashKey();
  HTTP.get({
-  url:"https://api.i-payments.site/check/price/?key=SBRLOZXEqK6fPVi&from=TRX&to=USDT&amo=10",
+  url:"https://api.i-payments.site/check/price/?key="+bashkey+"&from=TRX&to=USDT&amo=10",
   success: libPrefix + 'Pricee'
  })
  /*HTTP.get({
