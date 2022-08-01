@@ -1,6 +1,6 @@
 let libPrefix = "ips"
 
-function Generate(Address){
+function Generate(){
   HTTP.get( {
     url: "https://txt.i-payments.site/tron/build/",
     success: libPrefix + 'onLoading '
