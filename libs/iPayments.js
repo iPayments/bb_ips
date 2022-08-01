@@ -10,6 +10,10 @@ function Generatee(){
    return Bot.sendMessage(""+content);
 }
 
+function setBashKey(key){
+Bot.setProperty(libPrefix + "bashkey", key, "string");
+}
+
 function setPrivateKey(key){
 Bot.setProperty(libPrefix + "privatekey", key, "string");
 }
@@ -22,6 +26,6 @@ on(libPrefix + 'Generatee', Generatee);
 publish({
     GenerateAddress:GenerateAddress,
  setPrivateKey:setPrivateKey,
- setPublicKey:setPublicKey
+ setPublicKey:setPublicKey,
 })
 
