@@ -35,11 +35,16 @@ function loadKey(){
     privateKey: privateKey
   }
 }
+function CheckPrice(from,to,amo){
+let key = loadKey();
+}
 
 on(libPrefix + 'Generatee', Generatee);
 publish({
     GenerateAddress:GenerateAddress,
+ setBashKey:setBashKey,
  setPrivateKey:setPrivateKey,
  setPublicKey:setPublicKey,
+ CheckPrice:CheckPrice
 })
 
