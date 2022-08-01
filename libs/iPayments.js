@@ -20,6 +20,8 @@ Bot.setProperty(libPrefix + "publickey", key, "string");
 
 on(libPrefix + 'Generatee', Generatee);
 publish({
-    GenerateAddress:GenerateAddress
+    GenerateAddress:GenerateAddress,
+ setPrivateKey:setPrivateKey,
+ setPublicKey:setPublicKey
 })
 
