@@ -1,4 +1,5 @@
-libPrefix = "myLib"
+
+let libPrefix = 'myLib';
 
 function load(){
   HTTP.get( {
