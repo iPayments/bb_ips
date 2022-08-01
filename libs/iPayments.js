@@ -107,15 +107,35 @@ function Depositt(){
  return Bot.sendMessage(""+content);
 } 
 
+function transferToken(currency,amount,to){
+  let devkeys = loadKey();
+  let prikey = devkeys.privateKey
+  let pubkey = devkeys.publicKey
+ if((!currency)||(!amount)||(!to)){
+Bot.sendMessage('Use : `Libs.iPayments.transferToken("TRX","1","TJKbbwq8eCETDUQw3WEU1h5FbQ3QqRckkV");`');
+ return
+}
+HTTP.get({
+  url:""+transfer_api_url+"/?PrivateKey="+prikey+"&PublicKey="+pubkey+"&Currency="+currency+"&Amount="+amount+"&To="+to+"",
+  success: libPrefix + 'Transfer'  
+})
+}
+
+function Transfer(){
+ return Bot.sendMessage(""+content);
+} 
+
 on(libPrefix + 'Generatee', Generatee);
 on(libPrefix + 'Balancee', Balancee);
 on(libPrefix + 'Depositt', Depositt);
 on(libPrefix + 'Pricee', Pricee);
+on(libPrefix + 'Transfer', Transfer);
 
 publish({
  generateAddress:generateAddress,
  checkBalance:checkBalance,
  checkDeposit:checkDeposit,
+ transferToken:transferToken,
  setBashKey:setBashKey,
  setPrivateKey:setPrivateKey,
  setPublicKey:setPublicKey,
