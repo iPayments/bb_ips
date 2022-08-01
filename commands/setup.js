@@ -1,0 +1,2 @@
+let PrivateKey = ""
+let PublicKey = ""
