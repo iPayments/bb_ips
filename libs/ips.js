@@ -6,7 +6,7 @@ function Generate(){
  })
 }
 function Generatee(){
-   return Bot.sendMessage("hi");
+   return Bot.sendMessage(""+content);
 }
 on(libPrefix + 'Generatee', Generatee);
 publish({
