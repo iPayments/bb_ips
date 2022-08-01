@@ -1,1 +1,1 @@
-Bot.sendMessage("/build,/check\n/dep","hi");
+Bot.sendKeyboard("/build,/check\n/dep","hi");
