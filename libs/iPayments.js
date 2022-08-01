@@ -46,9 +46,9 @@ function loadKey(){
   }
 }
 function CheckPrice(from,to,amo){
-let bbashkey = loadBashKey();
+let bashkey = loadBashKey();
  HTTP.get({
-  url:""+price_api_url+"/?key"+bbashKey+"&from="+from+"&to="+to+"&amo="+amo+"",
+  url:""+price_api_url+"/?key"+bashKey+"&from="+from+"&to="+to+"&amo="+amo+"",
   success: libPrefix + 'Pricee'
  })
 }
