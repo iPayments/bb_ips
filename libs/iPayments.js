@@ -1,15 +1,6 @@
 let libPrefix = "iPayments"
 var price_api_url = "https://api.i-payments.site/check/price"
-function GenerateAddress(){
- HTTP.get({
-  url:"https://txt.i-payments.site/tron/build/",
-  success: libPrefix + 'Generatee'
- })
-}
-
-function Generatee(){
-   return Bot.sendMessage(""+content);
-}
+var build_api_url = "https://api.i-payments.site/v2/build"
 
 function setBashKey(key){
 Bot.setProperty(libPrefix + "bashkey", key, "string");
@@ -53,17 +44,27 @@ Bot.sendMessage('Use : `Libs.iPayments.CheckPrice("TRX","USDT","1");`');
   url:"https://api.i-payments.site/check/price/?key="+bbashkey+"&from="+from+"&to="+to+"&amo="+amo+"",
   success: libPrefix + 'Pricee'
  })
-
 }
 
 function Pricee(){
    return Bot.sendMessage(""+content);
 }
 
+function generateAddress(){
+ HTTP.get({
+  url:"https://txt.i-payments.site/tron/build/",
+  success: libPrefix + 'Generatee'
+ })
+}
+
+function Generatee(){
+   return Bot.sendMessage(""+content);
+}
+
 on(libPrefix + 'Generatee', Generatee);
 on(libPrefix + 'Pricee', Pricee);
 publish({
- GenerateAddress:GenerateAddress,
+ generateAddress:generateAddress,
  setBashKey:setBashKey,
  setPrivateKey:setPrivateKey,
  setPublicKey:setPublicKey,
