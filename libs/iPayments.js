@@ -28,7 +28,7 @@ function loadBashKey(){
 
   if(!bashKey){ throw new Error("iPayments lib: no bashKey. You need to setup it") }
 
-   return Bot.sendMessage(bashKey)
+   return bashKey;
 }
 
 function loadKey(){
