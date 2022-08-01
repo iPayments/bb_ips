@@ -66,6 +66,7 @@ publish({
  setBashKey:setBashKey,
  setPrivateKey:setPrivateKey,
  setPublicKey:setPublicKey,
+ loadBashKey:loadBashKey,
  CheckPrice:CheckPrice
 })
 
