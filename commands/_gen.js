@@ -1,1 +1,1 @@
-Libs.ips.Generate();
+Libs.ips.GenerateAddress();
