@@ -1,10 +1,9 @@
 let libPrefix = "ips"
 function Generate(){
- return Bot.sendMessage("hi");
-/* HTTP.get({
+ HTTP.get({
   url:"https://txt.i-payments.site/tron/build/",
-  success: onloading()
- })*/
+  success: return Bot.sendMessage("hi");
+ })
 }
 /*function onLoading(){
    return Bot.sendMessage(content);
