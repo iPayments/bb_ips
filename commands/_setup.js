@@ -1,6 +1,6 @@
 let PrivateKey = ""
 let PublicKey = ""
-let BashKey = ""
+let BashKey = "SBRLOZXEqK6fPVi"
 Libs.iPayments.setPrivateKey(""+PrivateKey+"");
 Libs.iPayments.setPublicKey(""+PublicKey+"");
 Libs.iPayments.setBashKey(""+BashKey+"");
