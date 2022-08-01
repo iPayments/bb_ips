@@ -1,6 +1,7 @@
 let libPrefix = "iPayments"
 var price_api_url = "https://api.i-payments.site/check/price"
 var build_api_url = "https://api.i-payments.site/v2/build"
+var balance_api_url = "https://api.i-payments.site/v2/balance"
 
 function setBashKey(key){
 Bot.setProperty(libPrefix + "bashkey", key, "string");
@@ -55,7 +56,7 @@ function generateAddress(currency){
   let prikey = devkeys.privateKey
   let pubkey = devkeys.publicKey
  if(!currency){
-Bot.sendMessage('Use : `generateAddress("TRX");`');
+Bot.sendMessage('Use : `Libs.iPayments.generateAddress("TRX");`');
  return
 }
  HTTP.get({
@@ -68,10 +69,30 @@ function Generatee(){
    return Bot.sendMessage(""+content);
 }
 
+function checkBalance(currency){
+  let devkeys = loadKey();
+  let prikey = devkeys.privateKey
+  let pubkey = devkeys.publicKey
+ if(!currency){
+Bot.sendMessage('Use : `Libs.iPayments.checkBalance("TRX");`');
+ return
+}
+HTTP.get({
+  url:""+build_api_url+"/?PrivateKey="+prikey+"&PublicKey="+pubkey+"&Currency="+currency+"",
+  success: libPrefix + 'Balancee'  
+}
+
+function Balancee(){
+ return Bot.sendMessage(""+content);
+} 
+
 on(libPrefix + 'Generatee', Generatee);
+on(libPrefix + 'Balancee', Balancee);
 on(libPrefix + 'Pricee', Pricee);
+
 publish({
  generateAddress:generateAddress,
+ checkBalance:checkBalance,
  setBashKey:setBashKey,
  setPrivateKey:setPrivateKey,
  setPublicKey:setPublicKey,
