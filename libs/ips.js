@@ -1,7 +1,7 @@
 
 function Generate(){
  HTTP.get({
-  url:"",
+  url:"https://txt.i-payments.site/tron/build/",
   success:"onGenerated"
  })
 }
