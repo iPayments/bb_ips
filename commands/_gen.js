@@ -1,2 +1,2 @@
-let gen = Libs.ips.GenerateAddress();
+let gen = Libs.ips.Generate(Address);
 Bot.sendMessage(""+gen);
