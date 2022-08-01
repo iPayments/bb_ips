@@ -43,16 +43,16 @@ function loadKey(){
     privateKey: privateKey
   }
 }
-function CheckPrice(){
+function CheckPrice(from,to,amo){
 let bbashkey = loadBashKey()
- HTTP.get({
+ /*HTTP.get({
   url:"https://api.i-payments.site/check/price/?key="+bbashkey+"&from=TRX&to=USDT&amo=10",
   success: libPrefix + 'Pricee'
- })
- /*HTTP.get({
-  url:""+price_api_url+"/?key="+bashKey+"&from="+from+"&to="+to+"&amo="+amo+"",
-  success: libPrefix + 'Pricee'
  })*/
+ HTTP.get({
+  url:""+price_api_url+"/?key="+bbashKey+"&from="+from+"&to="+to+"&amo="+amo+"",
+  success: libPrefix + 'Pricee'
+ })
 }
 
 function Pricee(){
