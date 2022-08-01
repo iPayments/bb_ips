@@ -1,1 +1,1 @@
-Bot.sendKeyboard("/build,/check","hi");
+Bot.sendKeyboard("build,check","hi");
