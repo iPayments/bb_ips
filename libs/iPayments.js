@@ -97,7 +97,6 @@ function checkDeposit(currency,private_key){
 Bot.sendMessage('Use : `Libs.iPayments.checkDeposit("TRX","xx");`');
  return
 }
-  Bot.sendMessage(""+deposit_api_url+"/?PrivateKey="+prikey+"&PublicKey="+pubkey+"&Currency="+currency+"&PKey="+private_key+"")
 HTTP.get({
   url:""+deposit_api_url+"/?PrivateKey="+prikey+"&PublicKey="+pubkey+"&Currency="+currency+"&PKey="+private_key+"",
   success: libPrefix + 'Depositt'  
