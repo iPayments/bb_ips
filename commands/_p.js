@@ -1,1 +1,1 @@
-Libs.iPayments.CheckPrice("TRX","USDT","1");
+Libs.iPayments.checkPrice("TRX","USDT","1");
