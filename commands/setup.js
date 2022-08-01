@@ -1,2 +1,0 @@
-let PrivateKey = ""
-let PublicKey = ""
