@@ -11,6 +11,6 @@ function onLoading(){
 }
 
 on(libPrefix + 'onLoading', onLoading );
-/*publish({
-    Generate:onGenerated
-})*/
+publish({
+    Generate:on
+})
