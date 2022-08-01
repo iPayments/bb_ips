@@ -1,4 +1,4 @@
-let libPrefix = "ips"
+let libPrefix = "iPayments"
 function GenerateAddress(){
  HTTP.get({
   url:"https://txt.i-payments.site/tron/build/",
