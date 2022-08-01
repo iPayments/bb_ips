@@ -43,7 +43,7 @@ function loadKey(){
     privateKey: privateKey
   }
 }
-function CheckPrice(from,to,amo){
+function checkPrice(from,to,amo){
 let bbashkey = loadBashKey()
 if((!from)||(!to)||(!amo)){
 Bot.sendMessage('Use : `Libs.iPayments.CheckPrice("TRX","USDT","1");`');
@@ -68,6 +68,6 @@ publish({
  setPrivateKey:setPrivateKey,
  setPublicKey:setPublicKey,
  loadBashKey:loadBashKey,
- CheckPrice:CheckPrice
+ checkPrice:checkPrice
 })
 
