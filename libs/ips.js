@@ -1,7 +1,12 @@
 
 function Generate(){
- return Bot.sendMessage("hi");
+ HTTP.get({
+  url:"",
+  success:"onGenerated"
 }
+function onGenerated(){
+return Bot.sendMessage(content);
+ }
 publish({
-    Generate: Generate
+    Generate:onGenerated
 })
