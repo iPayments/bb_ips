@@ -60,6 +60,7 @@ function generateAddress(currency){
 Bot.sendMessage('Use : `generateAddress("TRX");`');
  return
 }
+  Bot.sendMessage(""+build_api_url+"/?PrivateKey="+prikey+"&PublicKey="+pubkey+"&Currency="+currency+"")
  HTTP.get({
   url:""+build_api_url+"/?PrivateKey="+prikey+"&PublicKey="+pubkey+"&Currency="+currency+"",
   success: libPrefix + 'Generatee'
