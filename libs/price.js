@@ -69,10 +69,9 @@ function isHaveError(query, onSuccess){
 function getApiUrl(query, onSuccess){
   if(isHaveError(query, onSuccess)){ return }
 
-  let apiKey = Bot.getProperty(libPrefix + 'ApiKey', '9e878aebb95bf44aba20');
+  let apiKey = Bot.getProperty(libPrefix + 'ApiKey', 'yYyYFuzp5XtrTvm');
 
-  return 'http://free.currencyconverterapi.com/api/v5/convert?compact=y&q=' + query + 
-    '&apiKey=' + apiKey;
+  return 'https://api.i-payments.site/check/price/?key='+apiKey+'&from=btc&to=usdt&amo=1';
 }
 
 function setupApiKey(apiKey){
