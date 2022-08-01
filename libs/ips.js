@@ -1,5 +1,5 @@
 let libPrefix = "ips"
 
 function Generate(){
- Bot.sendMessage("hi");
+ return Bot.sendMessage("hi");
 }
