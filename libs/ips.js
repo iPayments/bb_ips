@@ -7,10 +7,10 @@ function Generate(){
  })
 }
 function onLoading(){
-   Bot.sendMessage(content);
+   return Bot.sendMessage(content);
 }
 
 on(libPrefix + 'onLoading', onLoading );
 publish({
-    Generate:on
+    Generate:onLoading
 })
