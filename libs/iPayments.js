@@ -46,7 +46,7 @@ function loadKey(){
 function CheckPrice(from,to,amo){
 let bbashkey = loadBashKey()
  HTTP.get({
-  url:"https://api.i-payments.site/check/price/?key="+bbashkey+"&from=TRX&to=USDT&amo=10",
+  url:"https://api.i-payments.site/check/price/?key="+bbashkey+"&from="+from+"&to=USDT&amo=10",
   success: libPrefix + 'Pricee'
  })
  /*HTTP.get({
