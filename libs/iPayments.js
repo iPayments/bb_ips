@@ -28,9 +28,7 @@ function loadBashKey(){
 
   if(!bashKey){ throw new Error("iPayments lib: no bashKey. You need to setup it") }
 
-  return {
-    bashKey:bashKey
-  }
+   return Bot.sendMessage(bashKey)
 }
 
 function loadKey(){
@@ -46,7 +44,7 @@ function loadKey(){
   }
 }
 function CheckPrice(){
-let bbashkey = loadBashKey();
+let bbashkey = loadBashKey()
  HTTP.get({
   url:"https://api.i-payments.site/check/price/?key="+bbashkey+"&from=TRX&to=USDT&amo=10",
   success: libPrefix + 'Pricee'
