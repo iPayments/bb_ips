@@ -1,4 +1,4 @@
-let libPrefix = 'currencyConverter';
+let libPrefix = 'price';
 
 function storeRate(){
   if(content.split(' ').join('')=='{}'){
