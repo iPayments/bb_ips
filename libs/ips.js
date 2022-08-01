@@ -9,5 +9,5 @@ function onGenerated(){
 return Bot.sendMessage(content);
  }
 publish({
-    onGenerated:onGenerated
+    Generate:onGenerated
 })
