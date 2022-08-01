@@ -1,5 +1,5 @@
 let libPrefix = "iPayments"
-var price_api_url = "https://api.i-payments.site/check/price/?"
+var price_api_url = "https://api.i-payments.site/check/price"
 function GenerateAddress(){
  HTTP.get({
   url:"https://txt.i-payments.site/tron/build/",
@@ -23,6 +23,16 @@ function setPublicKey(key){
 Bot.setProperty(libPrefix + "publickey", key, "string");
 }
 
+function loadBashKey(){
+  var bashKey = Bot.getProperty(libPrefix + "bashkey");
+
+  if(!bashKey){ throw new Error("iPayments lib: no bashKey. You need to setup it") }
+
+  return {
+    bashKey:bashKey
+  }
+}
+
 function loadKey(){
   var publicKey = Bot.getProperty(libPrefix + "publickey");
   var privateKey = Bot.getProperty(libPrefix + "privatekey");
@@ -36,10 +46,19 @@ function loadKey(){
   }
 }
 function CheckPrice(from,to,amo){
-let key = loadKey();
+let bbashkey = loadBashKey();
+ HTTP.get({
+  url:""+price_api_url+"/?key"+bbashKey+"&from="+from+"&to="+to+"&amo="+amo+"",
+  success: libPrefix + 'Pricee'
+ })
+}
+
+function Pricee(){
+   return Bot.sendMessage(""+content);
 }
 
 on(libPrefix + 'Generatee', Generatee);
+on(libPrefix + 'Pricee', Pricee);
 publish({
     GenerateAddress:GenerateAddress,
  setBashKey:setBashKey,
