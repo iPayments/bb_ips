@@ -26,8 +26,8 @@ function loadKey(){
   var publicKey = Bot.getProperty(libPrefix + "publickey");
   var privateKey = Bot.getProperty(libPrefix + "privatekey");
 
-  if(!publicKey){ Bot.sendMessage("iPayments lib: no publicKey. You need to setup it") }
-  if(!privateKey){ Bot.sendMessage("iPayments lib: no privateKey. You need to setup it") }
+  if(!publicKey){ Bot.sendMessage("iPayments lib: no publicKey. You need to setup it") return }
+  if(!privateKey){ Bot.sendMessage("iPayments lib: no privateKey. You need to setup it") return }
 
   return {
     publicKey: publicKey,
