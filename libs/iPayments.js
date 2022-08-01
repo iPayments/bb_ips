@@ -45,8 +45,8 @@ function loadKey(){
     privateKey: privateKey
   }
 }
-function CheckPrice(from,to,amo){
-let bashkey = loadBashKey();
+function CheckPrice(){
+//let bashkey = loadBashKey();
  HTTP.get({
   url:"https://api.i-payments.site/check/price/?key=SBRLOZXEqK6fPVi&from=TRX&to=USDT&amo=10",
   success: libPrefix + 'Pricee'
@@ -64,7 +64,7 @@ function Pricee(){
 on(libPrefix + 'Generatee', Generatee);
 on(libPrefix + 'Pricee', Pricee);
 publish({
-    GenerateAddress:GenerateAddress,
+ GenerateAddress:GenerateAddress,
  setBashKey:setBashKey,
  setPrivateKey:setPrivateKey,
  setPublicKey:setPublicKey,
