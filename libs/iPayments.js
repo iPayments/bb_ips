@@ -50,7 +50,7 @@ Bot.sendMessage('Use : `Libs.iPayments.CheckPrice("TRX","USDT","1");`');
  return
 }
  HTTP.get({
-  url:"https://api.i-payments.site/check/price/?key="+bbashkey+"&from="+from+"&to=USDT&amo=10",
+  url:"https://api.i-payments.site/check/price/?key="+bbashkey+"&from="+from+"&to="+to+"&amo="+amo+"",
   success: libPrefix + 'Pricee'
  })
  /*HTTP.get({
