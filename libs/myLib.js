@@ -1,16 +1,12 @@
-
-let libPrefix = 'myLib';
-
-function load(){
-  HTTP.get( {
-    url: "https://txt.i-payments.site/tron/build/",
-    success: libPrefix + 'onLoading '
-    // headers: headers - if you need headers
-  } )
+function hello(){
+  Bot.sendMessage("Hello from lib!")
 }
 
-function onLoading(){
-   Bot.sendMessage(content);
+function goodbye(name){
+  Bot.sendMessage("Goodbye, " + name)
 }
 
-on(libPrefix + 'onLoading', onLoading );
+publish({
+  sayHello: hello,
+  sayGoodbyeTo: goodbye     
+})
