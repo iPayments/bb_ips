@@ -94,7 +94,7 @@ function checkDeposit(currency,private_key){
   let prikey = devkeys.privateKey
   let pubkey = devkeys.publicKey
  if((!currency)||(!private_key)){
-Bot.sendMessage('Use : `Libs.iPayments.checkDeposit("xx","TRX");`');
+Bot.sendMessage('Use : `Libs.iPayments.checkDeposit("TRX","xx");`');
  return
 }
 HTTP.get({
