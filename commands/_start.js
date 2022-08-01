@@ -1,1 +1,2 @@
-Libs.myLib.load();
+Libs.myLib.hello()
+Libs.myLib.sayGoodbyeTo("Alice") 
