@@ -1,4 +1,4 @@
-libPrefix = "myLib"
+let libPrefix = "myLib"
 function hello(){
   Bot.sendMessage("Hello from lib!")
 }
