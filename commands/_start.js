@@ -1,1 +1,1 @@
-Libs.iPayments.generateAddress("TRX");
+Bot.sendKeyboard("/build,/check","hi");
