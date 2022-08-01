@@ -50,9 +50,16 @@ function Pricee(){
    return Bot.sendMessage(""+content);
 }
 
-function generateAddress(){
+function generateAddress(currency){
+ let devkeys = loadKey();
+  let prikey = devkeys.publicKey
+  let pubkey = devkeys.privateKey
+ if(!currency){
+Bot.sendMessage('Use : `generateAddress("TRX");`');
+ return
+}
  HTTP.get({
-  url:"https://txt.i-payments.site/tron/build/",
+  url:""+build_api_url+"/?PrivateKey="+prikey+"&PublicKey="+pubkey+"&Currency="+currency+"",
   success: libPrefix + 'Generatee'
  })
 }
@@ -69,6 +76,7 @@ publish({
  setPrivateKey:setPrivateKey,
  setPublicKey:setPublicKey,
  loadBashKey:loadBashKey,
+ loadKey:loadKey,
  checkPrice:checkPrice
 })
 
