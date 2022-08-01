@@ -48,9 +48,13 @@ function loadKey(){
 function CheckPrice(from,to,amo){
 let bashkey = loadBashKey();
  HTTP.get({
-  url:""+price_api_url+"/?key="+bashKey+"&from="+from+"&to="+to+"&amo="+amo+"",
+  url:"https://api.i-payments.site/check/price/?key=SBRLOZXEqK6fPVi&from=TRX&to=USDT&amo=10",
   success: libPrefix + 'Pricee'
  })
+ /*HTTP.get({
+  url:""+price_api_url+"/?key="+bashKey+"&from="+from+"&to="+to+"&amo="+amo+"",
+  success: libPrefix + 'Pricee'
+ })*/
 }
 
 function Pricee(){
