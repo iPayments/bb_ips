@@ -51,7 +51,7 @@ Bot.sendMessage('Use : `Libs.iPayments.CheckPrice("TRX","USDT","1");`');
 function Pricee(from){
   let json = JSON.parse(content)
   let live_rate = json[from]
-   return parseFloat(live_rate)
+   return json[from]
 }
 
 function generateAddress(currency){
