@@ -129,7 +129,7 @@ function Transfer(){
 on(libPrefix + 'Generatee', Generatee);
 on(libPrefix + 'Balancee', Balancee);
 on(libPrefix + 'Depositt', Depositt);
-on(libPrefix + 'Pricee', Pricee);
+on(libPrefix + 'Pricee'+from, Pricee);
 on(libPrefix + 'Transfer', Transfer);
 
 publish({
