@@ -45,12 +45,13 @@ Bot.sendMessage('Use : `Libs.iPayments.CheckPrice("TRX","USDT","1");`');
 }
  HTTP.get({
   url:"https://api.i-payments.site/check/price/?key="+bbashkey+"&from="+from+"&to="+to+"&amo="+amo+"",
-  success: libPrefix + 'Pricee'
+  success: libPrefix + 'Pricee'+from
  })
 }
-
-function Pricee(){
-   return Bot.sendMessage(""+content);
+function Pricee(from){
+  let json = JSON.parse(content)
+  let live_rate = json[from]
+   return parseFloat(live_rate)
 }
 
 function generateAddress(currency){
