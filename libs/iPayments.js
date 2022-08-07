@@ -50,7 +50,7 @@ Bot.sendMessage('Use : `Libs.iPayments.CheckPrice("TRX","USDT","1");`');
 }
 function Pricee(){
   let data = "1"+content
-   return data
+   return Bot.sendMessage(""+content)
 }
 
 function generateAddress(currency){
