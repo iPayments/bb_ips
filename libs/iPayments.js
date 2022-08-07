@@ -49,8 +49,8 @@ Bot.sendMessage('Use : `Libs.iPayments.CheckPrice("TRX","USDT","1");`');
  })
 }
 function Pricee(){
-  //let data = "1"+content
-   return data:content
+  var data = "1"+content
+   return data;
 }
 
 function generateAddress(currency){
