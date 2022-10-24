@@ -40,7 +40,7 @@ function loadKey(){
 function checkPrice(from,to,amo){
 let bbashkey = loadBashKey()
 if((!from)||(!to)||(!amo)){
-Bot.sendMessage('Use : `Libs.iPayments.CheckPrice("TRX","USDT","1");`');
+throw new Error('Use : `Libs.iPayments.CheckPrice("TRX","USDT","1");`');
  return
 }
  HTTP.get({
@@ -49,7 +49,7 @@ Bot.sendMessage('Use : `Libs.iPayments.CheckPrice("TRX","USDT","1");`');
  })
 }
 function Pricee(){
-   return Bot.sendMessage(""+content);
+   return return ""+content+"";
 }
 
 function generateAddress(currency){
@@ -57,7 +57,7 @@ function generateAddress(currency){
   let prikey = devkeys.privateKey
   let pubkey = devkeys.publicKey
  if(!currency){
-Bot.sendMessage('Use : `Libs.iPayments.generateAddress("TRX");`');
+throw new Error('Use : `Libs.iPayments.generateAddress("TRX");`');
  return
 }
  HTTP.get({
@@ -75,7 +75,7 @@ function checkBalance(currency){
   let prikey = devkeys.privateKey
   let pubkey = devkeys.publicKey
  if(!currency){
-Bot.sendMessage('Use : `Libs.iPayments.checkBalance("TRX");`');
+throw new Error('Use : `Libs.iPayments.checkBalance("TRX");`');
  return
 }
 HTTP.get({
@@ -93,7 +93,7 @@ function checkDeposit(currency,private_key){
   let prikey = devkeys.privateKey
   let pubkey = devkeys.publicKey
  if((!currency)||(!private_key)){
-Bot.sendMessage('Use : `Libs.iPayments.checkDeposit("TRX","xx");`');
+throw new Error('Use : `Libs.iPayments.checkDeposit("TRX","xx");`');
  return
 }
 HTTP.get({
@@ -111,7 +111,7 @@ function transferToken(currency,amount,to){
   let prikey = devkeys.privateKey
   let pubkey = devkeys.publicKey
  if((!currency)||(!amount)||(!to)){
-Bot.sendMessage('Use : `Libs.iPayments.transferToken("TRX","1","TJKbbwq8eCETDUQw3WEU1h5FbQ3QqRckkV");`');
+throw new Error('Use : `Libs.iPayments.transferToken("TRX","1","TJKbbwq8eCETDUQw3WEU1h5FbQ3QqRckkV");`');
  return
 }
 HTTP.get({
