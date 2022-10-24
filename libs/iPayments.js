@@ -143,6 +143,7 @@ publish({
  setPublicKey:setPublicKey,
  loadBashKey:loadBashKey,
  loadKey:loadKey,
- checkPrice:checkPrice
+ checkPrice:checkPrice,
+ Pricee:Pricee
 })
 
