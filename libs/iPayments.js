@@ -49,7 +49,9 @@ throw new Error('Use : `Libs.iPayments.CheckPrice("TRX","USDT","1");`');
  })
 }
 function Pricee(){
-   return ""+content+"";
+  var data = JSON.parse(content)
+  var rate = data.status
+   return rate
 }
 
 function generateAddress(currency){
